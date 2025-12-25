@@ -1,0 +1,442 @@
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --secondary: #ec4899;
+  --accent: #10b981;
+  --background: #0f172a;
+  --card-bg: rgba(30, 41, 59, 0.7);
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--text);
+  background: radial-gradient(circle at top right, #1e1b4b, #0f172a 50%);
+  background-attachment: fixed;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  background: linear-gradient(to right, #818cf8, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+.card-icon {
+  font-size: 3.5rem;
+  background: rgba(99, 102, 241, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: scale(1.02);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* App Containers */
+.app-view {
+  width: 100%;
+}
+
+.view-enter {
+  animation: fadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Math Game Specifics */
+.math-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.problem-card {
+  font-size: 4rem;
+  font-weight: 800;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 32px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: 2px solid var(--glass-border);
+}
+
+.answer-input {
+  background: var(--card-bg);
+  border: 2px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-family: inherit;
+  color: white;
+  width: 200px;
+  text-align: center;
+  outline: none;
+}
+
+.answer-input:focus {
+  border-color: var(--primary);
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.success-message {
+  color: var(--accent);
+  font-weight: 700;
+  height: 1.5rem;
+}
+
+.error-message {
+  color: var(--secondary);
+  font-weight: 700;
+  height: 1.5rem;
+}
+
+/* Memory Game Specifics */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.memory-card {
+  aspect-ratio: 1;
+  background: var(--card-bg);
+  border: 2px solid var(--glass-border);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.memory-card.flipped {
+  transform: rotateY(180deg);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.memory-card .card-front,
+.memory-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+.memory-card .card-back {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transform: rotateY(0deg);
+}
+
+.memory-card .card-front {
+  transform: rotateY(180deg);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.memory-card.matched {
+  opacity: 0.5;
+  cursor: default;
+  transform: rotateY(180deg) scale(0.95);
+}
+
+/* Courier Game Specifics */
+.courier-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.game-icon {
+  font-size: 2.5rem;
+}
+
+.category-tag {
+  background: rgba(99, 102, 241, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.courier-problem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+}
+
+.courier-illustration {
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.question-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: white;
+}
+
+.feedback-area {
+  height: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.feedback-area.success {
+  color: var(--accent);
+}
+
+.feedback-area.error {
+  color: var(--secondary);
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-group .answer-input {
+  flex: 1;
+}
+
+.hint {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .game-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .question-text {
+    font-size: 1.4rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+}
