@@ -1,17 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Julek uczy się | Akademia Zabawy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <meta name="description" content="Platforma edukacyjna dla Julka - ucz się matematyki i nie tylko przez zabawę!">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Julkowa Kraina Gier �</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <!-- DASHBOARD / HUB -->
+    <section id="screen-dashboard" class="screen active">
+      <h1 class="title">Cześć Julku!</h1>
+      <p class="subtitle">W co dzisiaj zagramy?</p>
+      <div class="grid-categories dashboard-grid">
+        <div class="category-card nature" onclick="window.switchView('nature')">
+          <span class="category-icon">🌿</span>
+          <h3 class="category-title">Przyroda z Julkiem</h3>
+          <p>Quiz o przyrodzie</p>
+        </div>
+        <div class="category-card ecology" onclick="window.switchView('courier')">
+          <span class="category-icon">🚚</span>
+          <h3 class="category-title">Kurier Julek</h3>
+          <p>Jednostki i waga</p>
+        </div>
+        <div class="category-card health" onclick="window.switchView('memory')">
+          <span class="category-icon">🧩</span>
+          <h3 class="category-title">Kraina Pamięci</h3>
+          <p>Ćwicz swoją pamięć</p>
+        </div>
+        <div class="category-card weather" onclick="window.switchView('math')">
+          <span class="category-icon">🔢</span>
+          <h3 class="category-title">Mistrz Matematyki</h3>
+          <p>Szybkie liczenie</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURE QUIZ CATEGORIES -->
+    <section id="screen-categories" class="screen">
+      <div class="quiz-header">
+        <button class="btn btn-icon" onclick="window.switchView('dashboard')">⬅️</button>
+        <h2 class="section-title">Wybierz temat przyrody</h2>
+      </div>
+      <div id="category-list" class="grid-categories">
+        <!-- Categories will be injected here -->
+      </div>
+    </section>
+
+    <!-- NATURE QUIZ GAMEPLAY -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-header">
+        <button class="btn btn-icon" onclick="window.switchView('nature')">⬅️</button>
+        <div class="progress-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="header-stats">
+          <div id="quiz-timer" class="stat-item">⏱️ 00:00</div>
+          <div id="quiz-correct-count" class="stat-item">✅ 0</div>
+          <div id="quiz-stats" class="stat-item">Pytanie 1/10</div>
+        </div>
+      </div>
+
+      <div class="card glass quiz-card">
+        <h3 id="question-text" class="question">Wczytywanie pytania...</h3>
+        <div id="options-list" class="grid-options">
+          <!-- Options will be injected here -->
+        </div>
+      </div>
+      <button id="btn-next" class="btn btn-primary big hidden">NASTĘPNE PYTANIE ➡️</button>
+      <div id="feedback" class="feedback">
+        <div class="feedback-content">
+          <span id="feedback-emoji">✅</span>
+          <p id="feedback-text">Brawo!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURE QUIZ RESULTS -->
+    <section id="screen-result" class="screen">
+      <div class="card glass result-card">
+        <div id="result-emoji" class="result-emoji">🎉</div>
+        <h2 id="result-title" class="title">Koniec quizu!</h2>
+        <p id="result-score" class="score">Twoje punkty: 10/10</p>
+        <p id="result-time" class="time-record">Czas: 01:23</p>
+        <p id="result-message" class="message">Jesteś prawdziwym ekspertem od przyrody!</p>
+        <div class="result-actions">
+          <button id="btn-restart" class="btn btn-primary">ZAGRAJ JESZCZE RAZ</button>
+          <button id="btn-home" class="btn btn-secondary">MENU GŁÓWNE</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENERIC GAME CONTAINER (Courier, Memory, Math) -->
+    <section id="screen-game" class="screen">
+      <div id="game-container" class="app-view">
+        <!-- Game content will be injected here -->
+      </div>
+    </section>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

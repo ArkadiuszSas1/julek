@@ -1,0 +1,53 @@
+# Umiejętności w zakresie postrzegania przyrody (Klasa 3)
+
+## Podstawowe
+- **Obserwuje zmiany** zachodzące w otaczającej rzeczywistości przyrodniczej i społecznej, dostrzega przyczyny i skutki, formułuje wnioski.
+- **Potrafi opisać życie** w wybranych ekosystemach: w lesie, ogrodzie, parku, na łące i w zbiornikach wodnych.
+- **Rozpoznaje** powszechnie znane rośliny i zwierzęta w różnych środowiskach przyrodniczych.
+- **Potrafi wymienić** podstawowe warunki niezbędne do życia roślinom i zwierzętom w gospodarstwie domowym, w szkolnych uprawach i hodowlach.
+- **Wie, jaki pożytek** przynoszą zwierzęta środowisku, i podaje proste przykłady.
+- **Zna zasady** prowadzenia prostych hodowli i upraw.
+- **Wymienia** charakterystyczne cechy krajobrazów Polski: nadmorskiego, nizinnego, górskiego.
+- **Wymienia** kilka charakterystycznych i typowych zwierząt dla wybranych regionów Polski.
+- **Wymienia i rozpoznaje** niektóre zwierzęta egzotyczne.
+- **Wyjaśnia** zależność zjawisk przyrody od pór roku.
+- **Nazywa** zjawiska charakterystyczne dla różnych pór roku.
+- **Wie, jak zachować się** odpowiednio do warunków atmosferycznych lub w sytuacjach wywołanych groźnymi zjawiskami atmosferycznymi.
+- **Chroni przyrodę** w swoim środowisku: nie śmieci, szanuje rośliny, zachowuje ciszę, pomaga zwierzętom.
+- **Zna zasady** segregowania odpadów; wie, dlaczego należy korzystać z opakowań ekologicznych.
+- **Rozumie sens** stosowania opakowań ekologicznych.
+- **Rozumie potrzebę** oszczędzania wody.
+- **Wie, jakie znaczenie** ma woda dla ludzi, zwierząt oraz roślin.
+- **Wie, jakie zniszczenia** w przyrodzie powoduje człowiek (wypalanie łąk, zaśmiecanie lasów, nadmierny hałas, kłusownictwo).
+- **Właściwie zachowuje się** w lesie, w parku itp.
+- **Zna wpływ** światła słonecznego na cykliczność życia na Ziemi.
+- **Wie, jaki wpływ** ma powietrze i woda na życie ludzi, roślin i zwierząt.
+- **Zna znaczenie** wybranych skał i minerałów.
+- **Wyróżnia i nazywa** części ciała oraz organy wewnętrzne, np. serce, płuca, żołądek.
+- **Zna podstawowe zasady** zdrowego odżywiania się.
+- **Rozumie konieczność** systematycznej kontroli zdrowia; stosuje się do zaleceń lekarzy (w tym stomatologa).
+- **Dba o zdrowie** i bezpieczeństwo innych (w miarę swoich możliwości).
+- **Orientuje się** w zagrożeniach ze strony roślin i zwierząt.
+- **Dostrzega niebezpieczeństwa** związane z: kąpielą, zabawami na śniegu i lodzie, zjawiskami atmosferycznymi (burza, huragan, śnieżyca, powódź).
+- **Potrafi wymienić** sposoby przystosowania się zwierząt do poszczególnych pór roku.
+- **Wie, jaką rolę** w środowisku odgrywają zwierzęta.
+- **Potrafi wymienić** zagrożenia dla środowiska ze strony człowieka i dla człowieka ze strony środowiska przyrodniczego.
+- **Wie, jak postępować** ze zwierzętami domowymi i dzikimi i jak im pomagać w różnych porach roku.
+- **Rozróżnia** rodzaje opadów w różnych porach roku.
+- **Potrafi obserwować** pogodę i prowadzić obrazkowy kalendarz pogody.
+- **Rozumie komunikaty** meteorologiczne podawane w radiu i telewizji.
+- **Ubiera się** stosownie do panujących warunków atmosferycznych.
+- **Dostrzega** w swoim otoczeniu przyrodniczym i społecznym cykle i regularności, funkcjonujące prawa i zależności.
+- **Podejmując różnorodne aktywności**, bierze pod uwagę bezpieczeństwo swoje i innych.
+
+## Ponadpodstawowe
+- **Samodzielnie prowadzi** proste hodowle.
+- **Segreguje** odpady.
+- **Uzasadnia potrzebę** oszczędzania wody.
+- **Wie, że należy szanować** przyrodę ożywioną i nieożywioną.
+- **Formułuje wnioski** na podstawie obserwacji otaczającej rzeczywistości.
+- **Stara się zapobiegać** zniszczeniom w przyrodzie.
+- **Wie, co to jest wyżyna**, i potrafi wymienić jej charakterystyczne cechy.
+- **Potrafi wymienić** różne zwierzęta żyjące w Polsce i rośliny rosnące na tym terenie (w tym nazwy gatunków chronionych).
+- **Zawsze przestrzega** zasad właściwego odżywiania się.
+- **Interesuje się** światem przyrody; systematycznie poszerza wiadomości.
