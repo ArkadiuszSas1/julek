@@ -1,0 +1,102 @@
+/* Math Mastery Isolated Styles */
+.math-view {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.math-view .math-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.math-view .math-problem-card {
+    font-size: 5rem;
+    font-weight: 800;
+    padding: 4rem;
+    background: white;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    border-bottom: 8px solid var(--secondary);
+}
+
+.math-view h2 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+.math-view .stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.math-view .stat-item {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.math-view .stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.math-view .success-message {
+    color: var(--primary-dark);
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    height: auto;
+    box-shadow: var(--shadow);
+}
+
+.math-view .error-message {
+    color: var(--accent);
+    background: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+    height: auto;
+    box-shadow: var(--shadow);
+}
+
+.math-view .answer-input {
+    width: 100%;
+    max-width: 300px;
+    font-size: 4rem;
+    padding: 1rem;
+    height: auto;
+    background: white;
+    border: 4px solid var(--orange);
+    border-radius: 20px;
+    text-align: center;
+    outline: none;
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 600px) {
+    .math-view .math-problem-card {
+        font-size: 3rem;
+        padding: 2rem;
+    }
+}
