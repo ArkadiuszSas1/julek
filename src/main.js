@@ -154,9 +154,15 @@ function renderNatureCategories() {
 function startNatureQuiz() {
   state.nature.currentQuestionIndex = 0;
   state.nature.score = 0;
-  state.nature.shuffledQuestions = [...state.nature.category.questions]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 10);
+
+  // Robust Fisher-Yates shuffle
+  const allQuestions = [...state.nature.category.questions];
+  for (let i = allQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [allQuestions[i], allQuestions[allQuestions[j]]] = [allQuestions[j], allQuestions[i]];
+  }
+
+  state.nature.shuffledQuestions = allQuestions.slice(0, 10);
 
   startNatureTimer();
   updateNatureStats();
@@ -220,11 +226,16 @@ function handleNatureAnswer(selectedIndex) {
     state.nature.score++;
     updateNatureStats();
     showNatureFeedback('✅', 'Wspaniale!');
+
+    // Auto-advance after a short delay so Julek can see the success
+    setTimeout(() => {
+      nextNatureQuestion();
+    }, 1200);
   } else {
     showNatureFeedback('❌', 'Ups! Prawie...');
+    // Show Next button ONLY when wrong, so Julek can see the correct answer
+    btnNext.classList.remove('hidden');
   }
-
-  btnNext.classList.remove('hidden');
 }
 
 function showNatureFeedback(emoji, text) {

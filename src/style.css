@@ -86,20 +86,21 @@ body {
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 8vw, 4rem);
   font-weight: 800;
   margin: 0 0 0.5rem 0;
-  background: linear-gradient(to right, var(--primary-dark), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
   font-size: 1.5rem;
-  opacity: 0.8;
+  font-weight: 600;
+  color: white;
+  opacity: 0.95;
   margin-bottom: 2rem;
   line-height: 1.5;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Buttons */
